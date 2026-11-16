@@ -14,7 +14,7 @@ header nav.topo {
     gap: 10px;
     padding: 10px 20px;
     box-sizing: border-box;
-    background-color: #082957;
+    background-color: #074397;
 }
 
 header #logotipo {
@@ -91,7 +91,7 @@ header .conta-botoes {
 }
 
 header .conta-botoes button {
-    background-color: #082957;
+    background-color: #074397;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -154,7 +154,7 @@ header nav.menu ul {
 
 header nav.menu li {
     padding: 0 20px;
-    border-left: 2px solid #082957;
+    border-left: 2px solid #074397;
 }
 
 header nav.menu li:first-child {
@@ -162,8 +162,95 @@ header nav.menu li:first-child {
 }
 
 header nav.menu a {
-    color: #082957;
+    color: #074397;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
+}
+
+.footer {
+  font-family: 'Arial', sans-serif;
+  width: 94%;
+  background: #074397;
+  color: #696565;
+  padding: 40px;
+  margin-top: 100px;
+  left: 0;
+  position: absolute;
+}
+
+.footer-main {
+  display: flex;
+  gap: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons .icon {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.social-icons .icon:hover {
+  color: #ffffff;
+}
+
+.footer hr {
+  border: 0;
+  border-top: 1px solid #333639;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  font-size: 12px;
+  color: #8c8c8c;
+    justify-content: space-between;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #8c8c8c;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
 }
