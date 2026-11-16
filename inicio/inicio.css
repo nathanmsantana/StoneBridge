@@ -14,7 +14,7 @@ header nav.topo {
     gap: 10px;
     padding: 10px 20px;
     box-sizing: border-box;
-    background-color: #074397;
+    background-color: #07326e;
 }
 
 header #logotipo {
@@ -91,7 +91,7 @@ header .conta-botoes {
 }
 
 header .conta-botoes button {
-    background-color: #074397;
+    background-color: #07326e;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -107,7 +107,7 @@ header .conta-botoes a {
 
 header .conta-botoes button:hover {
     background-color: #FFE600;
-    color: #082957;
+    color: #07326e;
     border-color: #FFE600;
 }
 
@@ -154,7 +154,7 @@ header nav.menu ul {
 
 header nav.menu li {
     padding: 0 20px;
-    border-left: 2px solid #074397;
+    border-left: 2px solid #07326e;
 }
 
 header nav.menu li:first-child {
@@ -162,16 +162,80 @@ header nav.menu li:first-child {
 }
 
 header nav.menu a {
-    color: #074397;
+    color: #07326e;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
 }
 
+.carousel-container {
+    width: 600px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carrossel {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-slide {
+    position: relative;
+    min-width: 100%;
+    scroll-snap-align: start;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.btn-seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.btn-seta:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.anterior {
+    left: 12px;
+}
+
+.proximo {
+    right: 12px;
+}
+
+
 .footer {
   font-family: 'Arial', sans-serif;
   width: 94%;
-  background: #074397;
+  background: #07326e;
   color: #696565;
   padding: 40px;
   margin-top: 100px;
