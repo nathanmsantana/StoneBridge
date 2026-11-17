@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f7;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    max-width: 100%;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #082957;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    color: #082957;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #082957;
+}
+
+.esqueci {
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 22px;
+}
+
+.esqueci a {
+    color: #082957;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.esqueci a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #FFD700;
+    color: #082957;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e6c300;
+}
+
+.cadastro {
+    color: #666;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+.cadastro a {
+    color: #082957;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.voltar {
+    display: inline-block;
+    margin-top: 25px;
+    color: #777;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.voltar:hover {
+    color: #082957;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 22px;
+    }
+}
