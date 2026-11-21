@@ -14,7 +14,7 @@ header nav.topo {
     gap: 10px;
     padding: 10px 20px;
     box-sizing: border-box;
-    background-color: #074397;
+    background-color: #07326e;
 }
 
 header #logotipo {
@@ -91,7 +91,7 @@ header .conta-botoes {
 }
 
 header .conta-botoes button {
-    background-color: #074397;
+    background-color: #07326e;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -107,7 +107,7 @@ header .conta-botoes a {
 
 header .conta-botoes button:hover {
     background-color: #FFE600;
-    color: #082957;
+    color: #07326e;
     border-color: #FFE600;
 }
 
@@ -154,7 +154,7 @@ header nav.menu ul {
 
 header nav.menu li {
     padding: 0 20px;
-    border-left: 2px solid #074397;
+    border-left: 2px solid #07326e;
 }
 
 header nav.menu li:first-child {
@@ -162,19 +162,19 @@ header nav.menu li:first-child {
 }
 
 header nav.menu a {
-    color: #074397;
+    color: #07326e;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
 }
 
+
 .footer {
   font-family: 'Arial', sans-serif;
   width: 94%;
-  background: #074397;
+  background: #07326e;
   color: #696565;
   padding: 40px;
-  margin-top: 100px;
   left: 0;
   position: absolute;
 }
@@ -210,21 +210,28 @@ header nav.menu a {
   color: #ffffff;
 }
 
-.social-icons {
-  display: flex;
-  gap: 15px;
+.social-icons img {
+    width: 10%;
 }
 
-.social-icons .icon {
-  text-decoration: none;
-  color: #b3b3b3;
-  font-weight: bold;
-  font-size: 14px;
-  transition: color 0.2s ease;
+.icon1:hover img{
+    transition: 0.3s;
+    transform: scale(1.2);
 }
 
-.social-icons .icon:hover {
-  color: #ffffff;
+.icon2:hover img{
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+.icon3:hover img{
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+.icon4:hover img{
+    transition: 0.3s;
+    transform: scale(1.2);
 }
 
 .footer hr {
@@ -253,4 +260,22 @@ header nav.menu a {
 
 .footer-links a:hover {
   color: #ffffff;
+}
+.container-termos {
+    font-family: 'Arial', sans-serif;
+    width: 60%;
+    max-width: 800px;
+    background: #1f3657;
+    color: #bfc8d4;
+    padding: 30px;
+    margin: 60px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: justify;
+}
+.termo{
+    font-family: 'Arial', sans-serif;
+    text-align: center;    
+    font-size: 40px;
+    font-weight: bold;
 }
