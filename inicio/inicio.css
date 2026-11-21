@@ -192,7 +192,7 @@ header nav.menu a {
 
 .carousel-slide img {
     width: 100%;
-    height: 350px;
+    height: 375px;
     display: block;
 }
 
@@ -203,7 +203,7 @@ header nav.menu a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3.3%;
+    width: 3%;
     height: 11%;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -225,6 +225,34 @@ header nav.menu a {
     right: 12px;
 }
 
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  width: 95%;
+  margin: 5% auto 0% 2.5%;
+}
+
+.categoria {
+  flex: 1 1 22%;
+  aspect-ratio: 3 / 2;
+  border: solid #000;
+  border-radius: 8%;
+  overflow: hidden;
+}
+
+.categoria a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.categoria img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .footer {
   font-family: 'Arial', sans-serif;
