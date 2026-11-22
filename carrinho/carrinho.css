@@ -654,7 +654,6 @@ header nav.menu a {
   stroke: currentColor;
 }
 
-
 .vazio {
   padding: 64px 24px;
   text-align: center;
@@ -665,7 +664,6 @@ header nav.menu a {
   font-weight: 700;
   color: #07326e;
 }
-
 
 .footer {
   font-family: 'Arial', sans-serif;
