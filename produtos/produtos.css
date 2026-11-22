@@ -415,6 +415,12 @@ header nav.menu a {
   color: #07306b;
 }
 
+.parede {
+  width: 100%;
+  height: 25px;
+  background-color: #FFD600;
+}
+
 .footer {
   width: 94%;
   background: #07326e;

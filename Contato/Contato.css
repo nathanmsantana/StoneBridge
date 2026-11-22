@@ -182,6 +182,12 @@ header nav.menu a {
     text-align: justify;
 }
 
+.parede {
+  width: 100%;
+  height: 25px;
+  background-color: #FFD600;
+}
+
 .footer {
   font-family: 'Arial', sans-serif;
   width: 94%;
