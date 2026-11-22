@@ -322,11 +322,12 @@ header nav.menu a {
   width: 100%;
   height: 25px;
   background-color: #FFD600;
+  margin-bottom: -6.7%;
 }
 
 .footer {
   font-family: 'Arial', sans-serif;
-  width: 94%;
+  width: 95%;
   background: #07326e;
   color: #696565;
   padding: 40px;
