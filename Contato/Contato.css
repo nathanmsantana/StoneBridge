@@ -2,6 +2,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     margin: 0;
+    font-family: "Inter", Arial, sans-serif;
 }
 
 header {
@@ -168,6 +169,18 @@ header nav.menu a {
     font-size: 14px;
 }
 
+.contato{
+    font-family: 'Arial', sans-serif;
+    width: 60%;
+    max-width: 800px;
+    background: #07326e;
+    color: #bfc8d4;
+    padding: 30px;
+    margin: 60px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    text-align: justify;
+}
 
 .footer {
   font-family: 'Arial', sans-serif;
@@ -260,16 +273,4 @@ header nav.menu a {
 
 .footer-links a:hover {
   color: #ffffff;
-}
-.contato{
-    font-family: 'Arial', sans-serif;
-    width: 60%;
-    max-width: 800px;
-    background: #1f3657;
-    color: #bfc8d4;
-    padding: 30px;
-    margin: 60px auto;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    text-align: justify;
 }

@@ -2,6 +2,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     margin: 0;
+    font-family: "Inter", Arial, sans-serif;
 }
 
 header {
@@ -181,7 +182,6 @@ header nav.menu a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
-  max-width: 920px;
   overflow: hidden;
   border-radius: 28px;
   background: #fff;
@@ -193,7 +193,7 @@ header nav.menu a {
   font-size: 28px;
   font-weight: 800;
   color: #FFD600;
-  font-size: 55px;
+  font-size: 80px;
 }
 
 .lateral {
