@@ -1,0 +1,602 @@
+body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+}
+
+header nav.topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #07326e;
+}
+
+header #logotipo {
+    width: 100%;
+    max-width: 250px;
+    margin-left: 10%;
+}
+
+header .pesquisa {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+header .pesquisa input {
+    width: 80%;
+    height: 40px;
+    margin: 0 0 0 8%;
+    padding-left: 20px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+}
+
+header .pesquisa input:focus {
+    outline: none;
+    border-color: #000;
+}
+
+header .btn-lupa {
+    height: 40px;
+    background-color: #FFE600;
+    border: none;
+    padding: 0 14px;
+    cursor: pointer;
+    border-radius: 0 6px 6px 0;
+}
+
+header #lupa {
+    width: 18px;
+    height: auto;
+    display: block;
+}
+
+header .conta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+header #icone-pessoa {
+    width: 32px;
+    height: auto;
+    display: block;
+}
+
+header .conta-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+}
+
+header .conta-botoes button {
+    background-color: #07326e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+header .conta-botoes a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header .conta-botoes button:hover {
+    background-color: #FFE600;
+    color: #07326e;
+}
+
+header .carrinho-box {
+    position: relative;
+    margin-right: 5%;
+    padding-left: 20px;
+}
+
+header .carrinho-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50px;
+    background-color: #fff;
+}
+
+header #carrinho {
+    width: 28px;
+    height: auto;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+header nav.menu {
+    display: flex;
+    justify-content: center;
+    padding: 8px 20px;
+    background-color: #FFD700;
+}
+
+header nav.menu ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav.menu li {
+    padding: 0 20px;
+    border-left: 2px solid #07326e;
+}
+
+header nav.menu li:first-child {
+    border-left: none;
+}
+
+header nav.menu a {
+    color: #07326e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.container {
+    width: 100%;
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+    background-color: #f2f2f2;
+}
+
+.login-card {
+    background-color: #07326e;
+    width: calc(100% - 30px);
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+    text-align: center;
+    margin: 50px auto 40px;
+}
+
+.logo {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.titulo {
+    color: #FFD700;
+    font-size: 24px;
+    margin: 0 0 15px;
+}
+
+.descricao {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 25px;
+}
+
+.login-form {
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #FFD700;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 14px;
+    background-color: #FFD700;
+    color: #082957;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.btn-login:hover {
+    background-color: #e6c300;
+}
+
+.cadastro {
+    color: #FFD600;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+.cadastro a {
+    color: #FFD600;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+.parede {
+    width: 100%;
+    height: 25px;
+    background-color: #FFD600;
+}
+
+.footer {
+    font-family: "Inter", Arial, sans-serif;
+    width: 100%;
+    background: #07326e;
+    color: #696565;
+    padding: 40px;
+    position: relative;
+    left: 0;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 15px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-icons img {
+    width: 28px;
+    max-width: 100%;
+}
+
+.icon1:hover img,
+.icon2:hover img,
+.icon3:hover img,
+.icon4:hover img {
+    transition: 0.3s;
+    transform: scale(1.2);
+}
+
+.footer hr {
+    border: 0;
+    border-top: 1px solid #333639;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    font-size: 12px;
+    color: #8c8c8c;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #8c8c8c;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    header #logotipo {
+        max-width: 200px;
+        margin-left: 2%;
+    }
+
+    header .pesquisa input {
+        width: 85%;
+        margin-left: 2%;
+    }
+
+    header .carrinho-box {
+        margin-right: 1%;
+    }
+
+    .footer {
+        padding: 35px 25px;
+    }
+
+    .footer-main {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav.topo {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    header #logotipo {
+        max-width: 180px;
+        margin: 0;
+    }
+
+    header .pesquisa {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    header .pesquisa input {
+        width: 100%;
+        margin: 0;
+    }
+
+    header .conta {
+        margin-left: auto;
+    }
+
+    header .carrinho-box {
+        margin: 0;
+        padding-left: 12px;
+    }
+
+    header .carrinho-box::before {
+        height: 35px;
+    }
+
+    header nav.menu {
+        padding: 10px;
+    }
+
+    header nav.menu ul {
+        gap: 10px 0;
+    }
+
+    header nav.menu li {
+        padding: 0 12px;
+    }
+
+    header nav.menu a {
+        font-size: 13px;
+    }
+
+    .container {
+        min-height: 500px;
+    }
+
+    .login-card {
+        padding: 35px 30px;
+        margin: 40px auto;
+    }
+
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav.topo {
+        gap: 12px;
+    }
+
+    header #logotipo {
+        max-width: 140px;
+    }
+
+    header #icone-pessoa {
+        width: 26px;
+    }
+
+    header .conta {
+        gap: 5px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    header #carrinho {
+        width: 24px;
+    }
+
+    header nav.menu ul {
+        gap: 12px;
+    }
+
+    header nav.menu li {
+        padding: 0 8px;
+    }
+
+    header nav.menu a {
+        font-size: 12px;
+    }
+
+    .container {
+        min-height: 450px;
+        padding: 30px 10px;
+    }
+
+    .login-card {
+        width: calc(100% - 10px);
+        padding: 30px 22px;
+        margin: 30px auto;
+    }
+
+    .logo {
+        width: 170px;
+        margin-bottom: 20px;
+    }
+
+    .titulo {
+        font-size: 21px;
+    }
+
+    .descricao {
+        font-size: 13px;
+    }
+
+    .form-input {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .btn-login {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .footer {
+        padding: 25px 15px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-column h3 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .footer-column ul {
+        gap: 8px;
+    }
+
+    .footer-column ul li a {
+        font-size: 12px;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .social-icons img {
+        width: 22px;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    header #logotipo {
+        max-width: 115px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 6px;
+        font-size: 10px;
+    }
+
+    header nav.menu li {
+        padding: 0 6px;
+    }
+
+    header nav.menu a {
+        font-size: 11px;
+    }
+
+    .login-card {
+        padding: 25px 18px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .titulo {
+        font-size: 19px;
+    }
+}
