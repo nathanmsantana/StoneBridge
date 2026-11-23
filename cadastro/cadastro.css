@@ -1,3 +1,8 @@
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
     overflow-x: hidden;
@@ -14,7 +19,6 @@ header nav.topo {
     align-items: center;
     gap: 10px;
     padding: 10px 20px;
-    box-sizing: border-box;
     background-color: #07326e;
 }
 
@@ -34,7 +38,6 @@ header .pesquisa {
 header .pesquisa input {
     width: 80%;
     height: 40px;
-    box-sizing: border-box;
     margin: 0 0 0 8%;
     padding-left: 20px;
     font-size: 15px;
@@ -43,22 +46,14 @@ header .pesquisa input {
     border-radius: 6px 0 0 6px;
 }
 
-header .btn-lupa {
-    height: 40px;
-    box-sizing: border-box;
-    background-color: #FFE600;
-    border: 1px solid #FFE600;
-    padding: 0 14px;
-    cursor: pointer;
-    border-radius: 0 6px 6px 0;
-}
-
 header .pesquisa input:focus {
     outline: none;
     border-color: #000;
 }
 
 header .btn-lupa {
+    height: 40px;
+    padding: 0 14px;
     background-color: #FFE600;
     border: none;
     cursor: pointer;
@@ -110,7 +105,6 @@ header .conta-botoes a {
 header .conta-botoes button:hover {
     background-color: #FFE600;
     color: #07326e;
-    border-color: #FFE600;
 }
 
 header .carrinho-box {
@@ -149,6 +143,7 @@ header nav.menu {
 header nav.menu ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -171,315 +166,538 @@ header nav.menu a {
 }
 
 .pagina {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  padding: 24px;
-  background: #f3f5f9;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 24px;
+    background: #f3f5f9;
 }
 
 .cadastro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 90%;
-  overflow: hidden;
-  border-radius: 28px;
-  background: #fff;
-  box-shadow: 0 24px 60px rgba(7, 50, 110, 0.18);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 28px;
+    background: #fff;
+    box-shadow: 0 24px 60px rgba(7, 50, 110, 0.18);
 }
 
 .titulo {
-  margin: 65px 0 6px;
-  font-size: 28px;
-  font-weight: 800;
-  color: #FFD600;
-  font-size: 60px;
+    margin: 65px 0 6px;
+    font-size: 60px;
+    font-weight: 800;
+    color: #FFD600;
 }
 
 .lateral {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 48px;
-  overflow: hidden;
-  color: #fff;
-  background: linear-gradient(160deg, #0a4396, #07326e 60%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(160deg, #0a4396, #07326e 60%);
 }
 
 .lateral::after {
-  content: '';
-  position: absolute;
-  right: -90px;
-  bottom: -90px;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  background: #FFE600;
+    content: '';
+    position: absolute;
+    right: -90px;
+    bottom: -90px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: #FFE600;
 }
 
 .marca {
-  font-size: 22px;
-  font-weight: 800;
+    font-size: 22px;
+    font-weight: 800;
 }
 
 .lateral h2 {
-  margin: 0 0 12px;
-  font-size: 32px;
-  line-height: 1.2;
+    margin: 0 0 12px;
+    font-size: 32px;
+    line-height: 1.2;
 }
 
 .lateral p {
-  max-width: 300px;
-  margin: 0 0 24px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
+    max-width: 300px;
+    margin: 0 0 24px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .vantagens {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
 }
 
 .vantagens li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .vantagens li::before {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-right: 10px;
-  border-radius: 50%;
-  background: #FFE600;
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: #FFE600;
 }
 
-
 .formulario {
-  padding: 48px;
-  color: #14213d;
+    padding: 48px;
+    color: #14213d;
 }
 
 .formulario h1 {
-  margin: 0 0 6px;
-  font-size: 28px;
-  font-weight: 800;
-  color: #07326e;
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 800;
+    color: #07326e;
 }
 
 .subtitulo {
-  margin: 0 0 28px;
-  color: #5d6b86;
+    margin: 0 0 28px;
+    color: #5d6b86;
 }
 
 .nomes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
 
 .grupo {
-  margin-bottom: 18px;
+    margin-bottom: 18px;
 }
 
 .grupo label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 14px;
-  font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .grupo input {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 14px 16px;
-  border: 1.5px solid #d9e0ee;
-  border-radius: 14px;
-  background: #f8faff;
-  font: inherit;
-  transition: 0.2s, box-shadow 0.2s;
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #d9e0ee;
+    border-radius: 14px;
+    background: #f8faff;
+    font: inherit;
+    transition: 0.2s, box-shadow 0.2s;
 }
 
 .grupo input:focus {
-  border-color: #0a4396;
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(255, 230, 0, 0.45);
+    border-color: #0a4396;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 230, 0, 0.45);
 }
 
 .campo-senha {
-  position: relative;
+    position: relative;
 }
 
 .campo-senha button {
-  position: absolute;
-  top: 50%;
-  right: 12px;
-  padding: 6px 8px;
-  border: 0;
-  background: none;
-  font: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  color: #0a4396;
-  cursor: pointer;
-  transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    padding: 6px 8px;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0a4396;
+    cursor: pointer;
+    transform: translateY(-50%);
 }
 
 .erro {
-  display: none;
-  margin: 6px 0 0;
-  font-size: 13px;
-  color: #d93636;
+    display: none;
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #d93636;
 }
 
 .grupo.com-erro input {
-  border-color: #d93636;
+    border-color: #d93636;
 }
 
 .grupo.com-erro .erro {
-  display: block;
+    display: block;
 }
 
 .ja-tem-conta a {
-  font-weight: 600;
-  text-decoration: none;
-  color: #0a4396;
+    font-weight: 600;
+    text-decoration: none;
+    color: #0a4396;
 }
 
 .ja-tem-conta a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .botao-criar {
-  width: 100%;
-  margin-top: 6px;
-  padding: 16px;
-  border: 0;
-  border-radius: 14px;
-  background: #07326e;
-  font: inherit;
-  font-size: 16px;
-  font-weight: 800;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.2s, color 0.2s;
+    width: 100%;
+    margin-top: 6px;
+    padding: 16px;
+    border: 0;
+    border-radius: 14px;
+    background: #07326e;
+    font: inherit;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s, color 0.2s;
 }
 
 .botao-criar:hover {
-  background: #FFE600;
-  color: #07326e;
+    background: #FFE600;
+    color: #07326e;
 }
 
 .botao-criar:disabled {
-  background: #b8c1d3;
-  color: #fff;
-  cursor: default;
+    background: #b8c1d3;
+    color: #fff;
+    cursor: default;
 }
 
 .ja-tem-conta {
-  margin: 24px 0 0;
-  text-align: center;
-  color: #5d6b86;
+    margin: 24px 0 0;
+    text-align: center;
+    color: #5d6b86;
 }
 
 .parede {
-  width: 100%;
-  height: 25px;
-  background-color: #FFD600;
+    width: 100%;
+    height: 25px;
+    background-color: #FFD600;
 }
 
 .footer {
-  font-family: 'Arial', sans-serif;
-  width: 95%;
-  background: #07326e;
-  color: #696565;
-  padding: 40px;
-  left: 0;
-  position: absolute;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    background: #07326e;
+    color: #696565;
+    padding: 40px;
 }
 
 .footer-main {
-  display: flex;
-  gap: 120px;
-  margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+    margin-bottom: 15px;
 }
 
 .footer-column h3 {
-  font-size: 16px;
-  color: #ffffff;
-  margin-bottom: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 
 .footer-column ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px; 
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .footer-column ul li a {
-  text-decoration: none;
-  color: #b3b3b3;
-  font-size: 14px;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    transition: color 0.2s ease;
 }
 
 .footer-column ul li a:hover {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .social-icons img {
     width: 10%;
 }
 
-.icon1:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon2:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon3:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon4:hover img{
+.icon1:hover img,
+.icon2:hover img,
+.icon3:hover img,
+.icon4:hover img {
     transition: 0.3s;
     transform: scale(1.2);
 }
 
 .footer hr {
-  border: 0;
-  border-top: 1px solid #333639;
-  margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #333639;
+    margin-bottom: 10px;
 }
 
 .footer-bottom {
-  display: flex;
-  font-size: 12px;
-  color: #8c8c8c;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #8c8c8c;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .footer-links {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-links a {
-  text-decoration: none;
-  color: #8c8c8c;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #8c8c8c;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+
+    header #logotipo {
+        max-width: 200px;
+        margin-left: 0;
+    }
+
+    header .pesquisa input {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    header .carrinho-box {
+        margin-right: 2%;
+    }
+
+    .cadastro {
+        width: 95%;
+    }
+
+    .lateral,
+    .formulario {
+        padding: 35px;
+    }
+
+    .titulo {
+        font-size: 48px;
+    }
+
+    .footer-main {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header nav.topo {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 12px 16px;
+    }
+
+    header #logotipo {
+        max-width: 170px;
+    }
+
+    header .pesquisa {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    header .conta {
+        gap: 6px;
+    }
+
+    header .carrinho-box {
+        margin-right: 0;
+    }
+
+    header nav.menu {
+        padding: 10px;
+    }
+
+    header nav.menu ul {
+        gap: 12px;
+    }
+
+    header nav.menu li {
+        padding: 5px 10px;
+        border-left: none;
+    }
+
+    header nav.menu a {
+        font-size: 13px;
+    }
+
+    .pagina {
+        min-height: auto;
+        padding: 30px 16px;
+    }
+
+    .cadastro {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .lateral {
+        min-height: 280px;
+        padding: 30px;
+    }
+
+    .titulo {
+        margin: 25px 0 6px;
+        font-size: 42px;
+    }
+
+    .lateral h2 {
+        font-size: 26px;
+    }
+
+    .formulario {
+        padding: 35px 30px;
+    }
+
+    .footer {
+        padding: 30px 24px;
+    }
+
+    .footer-main {
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+
+    header nav.topo {
+        gap: 12px;
+    }
+
+    header #logotipo {
+        max-width: 135px;
+    }
+
+    header #icone-pessoa {
+        width: 25px;
+    }
+
+    header .conta {
+        gap: 5px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 9px;
+        font-size: 12px;
+    }
+
+    header #carrinho {
+        width: 23px;
+    }
+
+    header .carrinho-box {
+        padding-left: 12px;
+    }
+
+    header .carrinho-box::before {
+        height: 35px;
+    }
+
+    header nav.menu ul {
+        gap: 5px;
+    }
+
+    header nav.menu li {
+        padding: 5px 7px;
+    }
+
+    header nav.menu a {
+        font-size: 12px;
+    }
+
+    .pagina {
+        padding: 20px 12px;
+    }
+
+    .cadastro {
+        border-radius: 18px;
+    }
+
+    .lateral {
+        min-height: 250px;
+        padding: 25px;
+    }
+
+    .marca {
+        font-size: 19px;
+    }
+
+    .titulo {
+        font-size: 36px;
+    }
+
+    .lateral h2 {
+        font-size: 23px;
+    }
+
+    .lateral p {
+        font-size: 14px;
+    }
+
+    .formulario {
+        padding: 28px 22px;
+    }
+
+    .formulario h1 {
+        font-size: 25px;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .nomes {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .grupo input {
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    .botao-criar {
+        padding: 14px;
+    }
+
+    .footer {
+        padding: 25px 18px;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
 }

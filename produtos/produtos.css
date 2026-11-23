@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
     overflow-x: hidden;
@@ -14,13 +18,13 @@ header nav.topo {
     align-items: center;
     gap: 10px;
     padding: 10px 20px;
-    box-sizing: border-box;
     background-color: #07326e;
 }
 
 header #logotipo {
     width: 100%;
     max-width: 250px;
+    height: auto;
     margin-left: 18%;
 }
 
@@ -34,7 +38,6 @@ header .pesquisa {
 header .pesquisa input {
     width: 80%;
     height: 40px;
-    box-sizing: border-box;
     margin: 0 0 0 8%;
     padding-left: 20px;
     font-size: 15px;
@@ -45,7 +48,6 @@ header .pesquisa input {
 
 header .btn-lupa {
     height: 40px;
-    box-sizing: border-box;
     background-color: #FFE600;
     border: 1px solid #FFE600;
     padding: 0 14px;
@@ -148,6 +150,7 @@ header nav.menu {
 header nav.menu ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -170,345 +173,668 @@ header nav.menu a {
 }
 
 .catalogo {
-  width: 90%;
-  margin: 50px auto 0;
-  padding-bottom: 90px;
-  color: #07326e;
+    width: 90%;
+    max-width: 1400px;
+    margin: 50px auto 0;
+    padding-bottom: 90px;
+    color: #07326e;
 }
 
 .faixa {
-  margin-bottom: 20px;
-  padding: 32px;
-  background: linear-gradient(160deg, #0b4aa0, #07306b 60%);
-  border-radius: 24px;
-  color: #fff;
+    margin-bottom: 20px;
+    padding: 32px;
+    background: linear-gradient(160deg, #0b4aa0, #07306b 60%);
+    border-radius: 24px;
+    color: #fff;
 }
 
 .faixa h1 {
-  margin: 0 0 12px;
+    margin: 0 0 12px;
 }
 
 .faixa h1::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 5px;
-  margin-top: 8px;
-  border-radius: 3px;
-  background: #ffe600;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 5px;
+    margin-top: 8px;
+    border-radius: 3px;
+    background: #ffe600;
 }
 
 .apresentacao {
-  margin: 0 0 24px;
-  color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 24px;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .barra {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .modos {
-  display: flex;
-  padding: 4px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    padding: 4px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .modos label {
-  padding: 10px 24px;
-  border-radius: 9px;
-  font-weight: 700;
-  color: #fff;
-  cursor: pointer;
+    padding: 10px 24px;
+    border-radius: 9px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
 }
 
 .modos input:checked + label {
-  background: #ffe600;
-  color: #07306b;
+    background: #ffe600;
+    color: #07306b;
 }
 
 .busca,
 .ordem {
-  box-sizing: border-box;
-  padding: 12px 16px;
-  border: 0;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  font: inherit;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font: inherit;
 }
 
 .busca {
-  flex: 1;
-  min-width: 220px;
+    flex: 1;
+    min-width: 220px;
 }
 
 .busca::placeholder {
-  color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.65);
 }
 
 .busca:focus,
 .ordem:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(255, 230, 0, 0.45);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 230, 0, 0.45);
 }
 
 .ordem option {
-  color: #07306b;
+    color: #07306b;
 }
 
 .beneficios {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
 }
 
 .beneficio {
-  display: grid;
-  grid-template-columns: 38px 1fr;
-  column-gap: 12px;
-  align-items: center;
-  padding: 14px 16px;
-  background: #fff;
-  border: 1px solid #e4e8f1;
-  border-radius: 16px;
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    column-gap: 12px;
+    align-items: center;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid #e4e8f1;
+    border-radius: 16px;
 }
 
 .beneficio::before {
-  content: "✓";
-  grid-row: span 2;
-  display: grid;
-  place-items: center;
-  height: 38px;
-  border-radius: 10px;
-  background: #ffe600;
-  font-weight: 800;
-  color: #07306b;
+    content: "✓";
+    grid-row: span 2;
+    display: grid;
+    place-items: center;
+    height: 38px;
+    border-radius: 10px;
+    background: #ffe600;
+    font-weight: 800;
+    color: #07306b;
 }
 
 .beneficio b {
-  color: #07306b;
+    color: #07306b;
 }
 
 .beneficio span {
-  font-size: 90%;
-  color: #5b6b86;
+    font-size: 90%;
+    color: #5b6b86;
 }
 
 .categorias {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 32px;
 }
 
 .categorias a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border: 1.5px solid #e4e8f1;
-  border-radius: 999px;
-  background: #fff;
-  font-weight: 600;
-  color: #07306b;
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: 1.5px solid #e4e8f1;
+    border-radius: 999px;
+    background: #fff;
+    font-weight: 600;
+    color: #07306b;
+    text-decoration: none;
 }
 
 .categorias a::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ffe600;
+    content: "";
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #ffe600;
 }
 
 .categorias a:hover {
-  border-color: #ffe600;
-  background: #ffe600;
+    border-color: #ffe600;
+    background: #ffe600;
 }
 
 .categoria {
-  margin-bottom: 24px;
-  padding: 24px;
-  background: #f7f9fd;
-  border: 1px solid #e4e8f1;
-  border-radius: 20px;
+    margin-bottom: 24px;
+    padding: 24px;
+    background: #f7f9fd;
+    border: 1px solid #e4e8f1;
+    border-radius: 20px;
 }
 
 .categoria h2 {
-  margin: 0;
-  padding-left: 12px;
-  border-left: 5px solid #ffe600;
-  font-size: 150%;
-  color: #07306b;
+    margin: 0;
+    padding-left: 12px;
+    border-left: 5px solid #ffe600;
+    font-size: 150%;
+    color: #07306b;
 }
 
 .lista {
-  display: grid;
-  gap: 20px;
-  margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 18px;
 }
 
 .lista:empty {
-  display: none;
+    display: none;
 }
 
 .cartao {
-  display: flex;
-  flex-direction: column;
-  padding: 14px;
-  background: #fff;
-  border: 1px solid #e4e8f1;
-  border-radius: 16px;
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    padding: 14px;
+    background: #fff;
+    border: 1px solid #e4e8f1;
+    border-radius: 16px;
 }
 
 .imagem {
-  aspect-ratio: 1;
-  margin-bottom: 12px;
-  overflow: hidden;
-  border-radius: 12px;
-  background: #e8eef9;
+    aspect-ratio: 1;
+    margin-bottom: 12px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #e8eef9;
 }
 
 .imagem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cartao h3 {
-  flex: 1;
-  margin: 0 0 8px;
-  font-size: 0.95rem;
-  font-weight: 600;
+    flex: 1;
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
 }
 
 .preco {
-  margin: 0 0 14px;
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #07306b;
+    margin: 0 0 14px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #07306b;
 }
 
 .preco small {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: #5b6b86;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #5b6b86;
 }
 
 .botao-comprar {
-  padding: 12px;
-  border: 0;
-  border-radius: 12px;
-  background: #07306b;
-  font: inherit;
-  font-weight: 700;
-  color: #fff;
-  cursor: pointer;
+    padding: 12px;
+    border: 0;
+    border-radius: 12px;
+    background: #07306b;
+    font: inherit;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
 }
 
 .botao-comprar:hover {
-  background: #ffe600;
-  color: #07306b;
+    background: #ffe600;
+    color: #07306b;
 }
 
 .parede {
-  width: 100%;
-  height: 25px;
-  background-color: #FFD600;
+    width: 100%;
+    height: 25px;
+    background-color: #FFD600;
 }
 
 .footer {
-  width: 95%;
-  background: #07326e;
-  color: #696565;
-  padding: 40px;
-  left: 0;
-  position: absolute;
+    width: 100%;
+    background: #07326e;
+    color: #696565;
+    padding: 40px;
+    position: relative;
 }
 
 .footer-main {
-  display: flex;
-  gap: 120px;
-  margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+    margin-bottom: 15px;
 }
 
 .footer-column h3 {
-  font-size: 16px;
-  color: #ffffff;
-  margin-bottom: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 
 .footer-column ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .footer-column ul li a {
-  text-decoration: none;
-  color: #b3b3b3;
-  font-size: 14px;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    transition: color 0.2s ease;
 }
 
 .footer-column ul li a:hover {
-  color: #ffffff;
+    color: #ffffff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .social-icons img {
-    width: 10%;
+    width: 30px;
+    max-width: 100%;
 }
 
-.icon1:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon2:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon3:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon4:hover img{
+.icon1:hover img,
+.icon2:hover img,
+.icon3:hover img,
+.icon4:hover img {
     transition: 0.3s;
     transform: scale(1.2);
 }
 
 .footer hr {
-  border: 0;
-  border-top: 1px solid #333639;
-  margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #333639;
+    margin-bottom: 10px;
 }
 
 .footer-bottom {
-  display: flex;
-  font-size: 12px;
-  color: #8c8c8c;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 12px;
+    color: #8c8c8c;
     justify-content: space-between;
 }
 
 .footer-links {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-links a {
-  text-decoration: none;
-  color: #8c8c8c;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #8c8c8c;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    header nav.topo {
+        gap: 12px;
+        padding: 10px 3%;
+    }
+
+    header #logotipo {
+        max-width: 180px;
+        margin-left: 5%;
+    }
+
+    header .carrinho-box {
+        margin-right: 2%;
+    }
+
+    .footer-main {
+        gap: 50px;
+    }
+
+    .lista {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    header nav.topo {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    header #logotipo {
+        max-width: 150px;
+        margin-left: 0;
+    }
+
+    header .pesquisa {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    header .pesquisa input {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    header .conta {
+        margin-left: auto;
+    }
+
+    header .carrinho-box {
+        margin-right: 0;
+    }
+
+    header #carrinho {
+        margin-right: 0;
+    }
+
+    header nav.menu {
+        padding: 10px;
+    }
+
+    header nav.menu ul {
+        gap: 10px 0;
+    }
+
+    header nav.menu li {
+        padding: 5px 12px;
+    }
+
+    .catalogo {
+        width: 92%;
+        margin-top: 30px;
+    }
+
+    .faixa {
+        padding: 25px;
+        border-radius: 18px;
+    }
+
+    .barra {
+        flex-direction: column;
+    }
+
+    .busca {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .ordem {
+        width: 100%;
+    }
+
+    .categorias {
+        gap: 8px;
+    }
+
+    .categorias a {
+        padding: 9px 14px;
+        font-size: 14px;
+    }
+
+    .categoria {
+        padding: 18px;
+    }
+
+    .lista {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 14px;
+    }
+
+    .footer {
+        padding: 30px 5%;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav.topo {
+        gap: 12px;
+        padding: 12px 4%;
+    }
+
+    header #logotipo {
+        max-width: 120px;
+    }
+
+    header #icone-pessoa {
+        width: 26px;
+    }
+
+    header .conta {
+        gap: 5px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    header #carrinho {
+        width: 24px;
+    }
+
+    header .carrinho-box {
+        padding-left: 12px;
+    }
+
+    header .carrinho-box::before {
+        height: 35px;
+    }
+
+    header .pesquisa input {
+        height: 38px;
+        font-size: 13px;
+    }
+
+    header .btn-lupa {
+        height: 38px;
+        padding: 0 12px;
+    }
+
+    header nav.menu ul {
+        gap: 6px 0;
+    }
+
+    header nav.menu li {
+        padding: 5px 8px;
+    }
+
+    header nav.menu a {
+        font-size: 12px;
+    }
+
+    .catalogo {
+        width: 92%;
+        margin-top: 25px;
+        padding-bottom: 50px;
+    }
+
+    .faixa {
+        padding: 20px;
+    }
+
+    .faixa h1 {
+        font-size: 1.5rem;
+    }
+
+    .apresentacao {
+        font-size: 14px;
+    }
+
+    .modos {
+        width: 100%;
+    }
+
+    .modos label {
+        flex: 1;
+        padding: 10px 12px;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .categorias {
+        margin-bottom: 24px;
+    }
+
+    .categorias a {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .categoria {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .categoria h2 {
+        font-size: 1.2rem;
+    }
+
+    .lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .cartao {
+        padding: 10px;
+    }
+
+    .cartao h3 {
+        font-size: 0.85rem;
+    }
+
+    .preco {
+        font-size: 1.1rem;
+    }
+
+    .botao-comprar {
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+
+    .footer {
+        padding: 25px 5%;
+    }
+
+    .footer-main {
+        gap: 25px 15px;
+    }
+
+    .footer-column h3 {
+        font-size: 14px;
+    }
+
+    .footer-column ul li a {
+        font-size: 12px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+
+    .social-icons img {
+        width: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    header #logotipo {
+        max-width: 100px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 6px;
+        font-size: 10px;
+    }
+
+    header nav.menu li {
+        padding: 5px 6px;
+    }
+
+    header nav.menu a {
+        font-size: 11px;
+    }
+
+    .faixa {
+        padding: 16px;
+    }
+
+    .faixa h1 {
+        font-size: 1.3rem;
+    }
+
+    .lista {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
 }

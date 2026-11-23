@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
     overflow-x: hidden;
@@ -12,16 +16,15 @@ header {
 header nav.topo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 20px;
-    box-sizing: border-box;
+    gap: 20px;
+    padding: 10px 5%;
     background-color: #07326e;
 }
 
 header #logotipo {
     width: 100%;
     max-width: 250px;
-    margin-left: 18%;
+    margin-left: 10%;
 }
 
 header .pesquisa {
@@ -33,24 +36,14 @@ header .pesquisa {
 
 header .pesquisa input {
     width: 80%;
+    min-width: 0;
     height: 40px;
-    box-sizing: border-box;
-    margin: 0 0 0 8%;
+    margin: 0 0 0 5%;
     padding-left: 20px;
     font-size: 15px;
     border: 1px solid #ccc;
     border-right: none;
     border-radius: 6px 0 0 6px;
-}
-
-header .btn-lupa {
-    height: 40px;
-    box-sizing: border-box;
-    background-color: #FFE600;
-    border: 1px solid #FFE600;
-    padding: 0 14px;
-    cursor: pointer;
-    border-radius: 0 6px 6px 0;
 }
 
 header .pesquisa input:focus {
@@ -59,6 +52,8 @@ header .pesquisa input:focus {
 }
 
 header .btn-lupa {
+    height: 40px;
+    padding: 0 14px;
     background-color: #FFE600;
     border: none;
     cursor: pointer;
@@ -109,12 +104,11 @@ header .conta-botoes a {
 header .conta-botoes button:hover {
     background-color: #FFE600;
     color: #07326e;
-    border-color: #FFE600;
 }
 
 header .carrinho-box {
     position: relative;
-    margin-right: 8%;
+    margin-right: 5%;
     padding-left: 20px;
 }
 
@@ -133,7 +127,6 @@ header #carrinho {
     width: 28px;
     height: auto;
     flex-shrink: 0;
-    margin-right: 8%;
     cursor: pointer;
 }
 
@@ -148,6 +141,7 @@ header nav.menu {
 header nav.menu ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -170,598 +164,928 @@ header nav.menu a {
 }
 
 .carrinho {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px 60px;
-  color: #14213d;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    color: #14213d;
 }
 
 .titulo {
-  margin: 0;
-  font-size: 30px;
-  font-weight: 800;
-  color: #07326e;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #07326e;
 }
 
 .titulo::after {
-  content: '';
-  display: block;
-  width: 56px;
-  height: 5px;
-  margin-top: 10px;
-  border-radius: 99px;
-  background: #FFE600;
+    content: '';
+    display: block;
+    width: 56px;
+    height: 5px;
+    margin-top: 10px;
+    border-radius: 99px;
+    background: #FFE600;
 }
 
 .titulo span {
-  margin-left: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #5d6b86;
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5d6b86;
 }
 
 .conteudo {
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 32px;
-  align-items: start;
-  margin-top: 28px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 32px;
+    align-items: start;
+    margin-top: 28px;
 }
 
-
 .frete-gratis {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 16px;
-  padding: 20px 24px;
-  border-radius: 20px;
-  background: linear-gradient(100deg, #e8eefa, #fffbd1);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 16px;
+    padding: 20px 24px;
+    border-radius: 20px;
+    background: linear-gradient(100deg, #e8eefa, #fffbd1);
 }
 
 .frete-icone {
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: #07326e;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #07326e;
 }
 
 .frete-icone svg {
-  width: 26px;
-  height: 26px;
-  stroke: #FFE600;
+    width: 26px;
+    height: 26px;
+    stroke: #FFE600;
 }
 
 .frete-info {
-  flex: 1;
+    flex: 1;
+    min-width: 0;
 }
 
 .frete-info p {
-  margin: 0 0 10px;
-  font-size: 14px;
+    margin: 0 0 10px;
+    font-size: 14px;
 }
 
 .frete-info b {
-  color: #07326e;
+    color: #07326e;
 }
 
 .frete-barra {
-  height: 8px;
-  overflow: hidden;
-  border-radius: 99px;
-  background: #fff;
+    height: 8px;
+    overflow: hidden;
+    border-radius: 99px;
+    background: #fff;
 }
 
 .frete-barra span {
-  display: block;
-  width: 0;
-  height: 100%;
-  border-radius: 99px;
-  background: linear-gradient(90deg, #07326e, #0a4396);
-  transition: width 0.4s;
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: 99px;
+    background: linear-gradient(90deg, #07326e, #0a4396);
+    transition: width 0.4s;
 }
 
-
 .lista {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  border: 1px solid #e3e8f1;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0 8px 24px rgba(7, 50, 110, 0.06);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    border: 1px solid #e3e8f1;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(7, 50, 110, 0.06);
 }
 
 .item {
-  display: grid;
-  grid-template-columns: 96px 1fr auto 120px;
-  gap: 20px;
-  align-items: center;
-  padding: 22px 24px;
-  border-bottom: 1px solid #e3e8f1;
-  transition: background 0.2s;
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr) auto 120px;
+    gap: 20px;
+    align-items: center;
+    padding: 22px 24px;
+    border-bottom: 1px solid #e3e8f1;
+    transition: background 0.2s;
 }
 
 .item:hover {
-  background: #f8faff;
+    background: #f8faff;
 }
 
 .item:last-child {
-  border-bottom: 0;
+    border-bottom: 0;
 }
 
 .item-foto {
-  display: grid;
-  place-items: center;
-  width: 96px;
-  height: 96px;
-  overflow: hidden;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #e8eefa, #d6e1f6);
+    display: grid;
+    place-items: center;
+    width: 96px;
+    height: 96px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #e8eefa, #d6e1f6);
 }
 
 .item-foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .item-foto svg {
-  width: 38px;
-  height: 38px;
-  stroke: #07326e;
-  opacity: 0.4;
+    width: 38px;
+    height: 38px;
+    stroke: #07326e;
+    opacity: 0.4;
 }
 
 .item-nome {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.35;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
 }
 
 .item-vendedor {
-  margin: 4px 0 0;
-  font-size: 13px;
-  color: #5d6b86;
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #5d6b86;
 }
 
 .item-selos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 10px 0;
 }
 
 .selo-entrega,
 .selo-desconto {
-  padding: 3px 10px;
-  border-radius: 99px;
-  font-size: 12px;
-  font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 99px;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .selo-entrega {
-  color: #007a3b;
-  background: #e0f6ea;
+    color: #007a3b;
+    background: #e0f6ea;
 }
 
 .selo-desconto {
-  color: #07326e;
-  background: #FFE600;
+    color: #07326e;
+    background: #FFE600;
 }
 
 .botao-remover {
-  padding: 0;
-  border: 0;
-  background: none;
-  font: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  color: #5d6b86;
-  cursor: pointer;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: #5d6b86;
+    cursor: pointer;
 }
 
 .botao-remover:hover {
-  color: #d93636;
+    color: #d93636;
 }
 
 .quantidade {
-  display: flex;
-  align-items: center;
-  padding: 4px;
-  border-radius: 99px;
-  background: #f3f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 99px;
+    background: #f3f5f9;
 }
 
 .quantidade button {
-  width: 32px;
-  height: 32px;
-  border: 0;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(7, 50, 110, 0.15);
-  font: inherit;
-  font-weight: 700;
-  color: #07326e;
-  cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(7, 50, 110, 0.15);
+    font: inherit;
+    font-weight: 700;
+    color: #07326e;
+    cursor: pointer;
 }
 
 .quantidade button:hover:not(:disabled) {
-  background: #FFE600;
+    background: #FFE600;
 }
 
 .quantidade button:disabled {
-  color: #b8c1d3;
-  box-shadow: none;
-  cursor: not-allowed;
+    color: #b8c1d3;
+    box-shadow: none;
+    cursor: not-allowed;
 }
 
 .quantidade span {
-  min-width: 36px;
-  text-align: center;
-  font-weight: 700;
+    min-width: 36px;
+    text-align: center;
+    font-weight: 700;
 }
 
 .item-valores {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .item-preco-antigo {
-  font-size: 13px;
-  color: #5d6b86;
+    font-size: 13px;
+    color: #5d6b86;
 }
 
 .item-preco {
-  font-size: 20px;
-  font-weight: 800;
-  color: #07326e;
+    font-size: 20px;
+    font-weight: 800;
+    color: #07326e;
 }
 
-
 .beneficios {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 16px;
 }
 
 .beneficio {
-  display: flex;
-  gap: 12px;
-  padding: 18px;
-  border: 1px solid #e3e8f1;
-  border-radius: 20px;
-  background: #fff;
+    display: flex;
+    gap: 12px;
+    padding: 18px;
+    border: 1px solid #e3e8f1;
+    border-radius: 20px;
+    background: #fff;
 }
 
 .beneficio-icone {
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background: #FFE600;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #FFE600;
 }
 
 .beneficio-icone svg {
-  width: 22px;
-  height: 22px;
-  stroke: #07326e;
+    width: 22px;
+    height: 22px;
+    stroke: #07326e;
 }
 
 .beneficio strong {
-  font-size: 14px;
-  color: #07326e;
+    font-size: 14px;
+    color: #07326e;
 }
 
 .beneficio p {
-  margin: 4px 0 0;
-  font-size: 12px;
-  line-height: 1.4;
-  color: #5d6b86;
+    margin: 4px 0 0;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #5d6b86;
 }
 
-
 .resumo {
-  position: sticky;
-  top: 24px;
-  padding: 28px;
-  border-radius: 24px;
-  color: #fff;
-  background: linear-gradient(160deg, #0a4396, #07326e 55%);
-  box-shadow: 0 20px 40px rgba(7, 50, 110, 0.25);
+    position: sticky;
+    top: 24px;
+    padding: 28px;
+    border-radius: 24px;
+    color: #fff;
+    background: linear-gradient(160deg, #0a4396, #07326e 55%);
+    box-shadow: 0 20px 40px rgba(7, 50, 110, 0.25);
 }
 
 .resumo h2 {
-  margin: 0 0 16px;
-  font-size: 20px;
-  font-weight: 800;
+    margin: 0 0 16px;
+    font-size: 20px;
+    font-weight: 800;
 }
 
 .resumo-valores {
-  margin: 0;
+    margin: 0;
 }
 
 .resumo-valores div {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .resumo-valores .destaque {
-  color: #FFE600;
+    color: #FFE600;
 }
 
 .resumo-valores dd {
-  margin: 0;
+    margin: 0;
 }
 
 .resumo-total {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-top: 8px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 8px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 600;
 }
 
 .resumo-total strong {
-  font-size: 32px;
-  font-weight: 800;
+    font-size: 32px;
+    font-weight: 800;
 }
 
 .resumo-parcelas {
-  margin: 4px 0 0;
-  font-size: 13px;
-  text-align: right;
-  color: rgba(255, 255, 255, 0.7);
+    margin: 4px 0 0;
+    font-size: 13px;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .resumo-pix {
-  margin: 16px 0 24px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-  color: #FFE600;
-  background: rgba(255, 230, 0, 0.12);
+    margin: 16px 0 24px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: #FFE600;
+    background: rgba(255, 230, 0, 0.12);
 }
 
-
 .cupom {
-  display: flex;
-  gap: 8px;
+    display: flex;
+    gap: 8px;
 }
 
 .cupom input {
-  flex: 1;
-  min-width: 0;
-  padding: 12px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  font: inherit;
-  font-size: 14px;
-  color: #fff;
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    font: inherit;
+    font-size: 14px;
+    color: #fff;
 }
 
 .cupom input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .cupom input:focus {
-  border-color: #FFE600;
-  outline: none;
+    border-color: #FFE600;
+    outline: none;
 }
 
 .cupom button {
-  padding: 0 18px;
-  border: 0;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
-  font: inherit;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
 }
 
 .cupom button:hover {
-  background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .cupom-mensagem {
-  min-height: 20px;
-  margin: 8px 0 12px;
-  font-size: 13px;
+    min-height: 20px;
+    margin: 8px 0 12px;
+    font-size: 13px;
 }
 
 .cupom-mensagem.sucesso {
-  color: #FFE600;
+    color: #FFE600;
 }
 
 .cupom-mensagem.erro {
-  color: #ffb4b4;
+    color: #ffb4b4;
 }
 
-
 .botao-finalizar {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 16px;
-  border: 0;
-  border-radius: 14px;
-  background: #FFE600;
-  box-shadow: 0 8px 20px rgba(255, 230, 0, 0.25);
-  font: inherit;
-  font-size: 16px;
-  font-weight: 800;
-  color: #07326e;
-  cursor: pointer;
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    border-radius: 14px;
+    background: #FFE600;
+    box-shadow: 0 8px 20px rgba(255, 230, 0, 0.25);
+    font: inherit;
+    font-size: 16px;
+    font-weight: 800;
+    color: #07326e;
+    cursor: pointer;
 }
 
 .botao-finalizar:hover {
-  background: #f2d900;
+    background: #f2d900;
 }
 
 .botao-finalizar:disabled {
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: none;
-  color: rgba(255, 255, 255, 0.5);
-  cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
 }
 
 .link-continuar {
-  display: block;
-  margin-top: 14px;
-  font-size: 14px;
-  text-align: center;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
+    display: block;
+    margin-top: 14px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .link-continuar:hover {
-  color: #fff;
-  text-decoration: underline;
+    color: #fff;
+    text-decoration: underline;
 }
 
 .resumo-seguro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  margin: 18px 0 0;
-  padding-top: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 18px 0 0;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .resumo-seguro svg {
-  width: 14px;
-  height: 14px;
-  stroke: currentColor;
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
 }
 
 .vazio {
-  padding: 64px 24px;
-  text-align: center;
-  color: #5d6b86;
+    padding: 64px 24px;
+    text-align: center;
+    color: #5d6b86;
 }
 
 .vazio a {
-  font-weight: 700;
-  color: #07326e;
+    font-weight: 700;
+    color: #07326e;
 }
 
 .parede {
-  width: 100%;
-  height: 25px;
-  background-color: #FFD600;
+    width: 100%;
+    height: 25px;
+    background-color: #FFD600;
 }
 
 .footer {
-  font-family: 'Arial', sans-serif;
-  width: 95%;
-  background: #07326e;
-  color: #696565;
-  padding: 40px;
-  margin-top: 100px;
-  left: 0;
-  position: absolute;
+    width: 100%;
+    background: #07326e;
+    color: #696565;
+    padding: 40px;
+    margin-top: 100px;
+    position: relative;
 }
 
 .footer-main {
-  display: flex;
-  gap: 120px;
-  margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 15px;
 }
 
 .footer-column h3 {
-  font-size: 16px;
-  color: #ffffff;
-  margin-bottom: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 
 .footer-column ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px; 
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .footer-column ul li a {
-  text-decoration: none;
-  color: #b3b3b3;
-  font-size: 14px;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    transition: color 0.2s ease;
 }
 
 .footer-column ul li a:hover {
-  color: #ffffff;
+    color: #ffffff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .social-icons img {
-    width: 10%;
+    width: 32px;
+    max-width: 100%;
 }
 
-.icon1:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon2:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon3:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon4:hover img{
+.icon1:hover img,
+.icon2:hover img,
+.icon3:hover img,
+.icon4:hover img {
     transition: 0.3s;
     transform: scale(1.2);
 }
 
 .footer hr {
-  border: 0;
-  border-top: 1px solid #333639;
-  margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #333639;
+    margin-bottom: 10px;
 }
 
 .footer-bottom {
-  display: flex;
-  font-size: 12px;
-  color: #8c8c8c;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 12px;
+    color: #8c8c8c;
     justify-content: space-between;
 }
 
 .footer-links {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-links a {
-  text-decoration: none;
-  color: #8c8c8c;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #8c8c8c;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    header nav.topo {
+        padding: 10px 3%;
+    }
+
+    header #logotipo {
+        max-width: 190px;
+        margin-left: 0;
+    }
+
+    header .pesquisa input {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    header .carrinho-box {
+        margin-right: 0;
+    }
+
+    .conteudo {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        gap: 20px;
+    }
+
+    .item {
+        grid-template-columns: 80px minmax(0, 1fr) auto;
+        gap: 14px;
+    }
+
+    .item-foto {
+        width: 80px;
+        height: 80px;
+    }
+
+    .item-valores {
+        grid-column: 2 / 3;
+        align-items: flex-start;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 35px 25px;
+    }
+
+    .footer-main {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav.topo {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    header #logotipo {
+        max-width: 160px;
+    }
+
+    header .pesquisa {
+        order: 3;
+        flex: 1 1 100%;
+    }
+
+    header .conta {
+        gap: 6px;
+    }
+
+    header #icone-pessoa {
+        width: 27px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 9px;
+        font-size: 12px;
+    }
+
+    header .carrinho-box {
+        padding-left: 12px;
+    }
+
+    header .carrinho-box::before {
+        height: 35px;
+    }
+
+    header #carrinho {
+        width: 25px;
+    }
+
+    header nav.menu {
+        padding: 10px;
+    }
+
+    header nav.menu ul {
+        gap: 10px 0;
+    }
+
+    header nav.menu li {
+        padding: 0 12px;
+    }
+
+    header nav.menu a {
+        font-size: 13px;
+    }
+
+    .carrinho {
+        padding: 30px 16px 40px;
+    }
+
+    .titulo {
+        font-size: 26px;
+    }
+
+    .conteudo {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .resumo {
+        position: static;
+    }
+
+    .item {
+        grid-template-columns: 75px minmax(0, 1fr);
+        gap: 12px;
+        padding: 18px;
+    }
+
+    .item-foto {
+        width: 75px;
+        height: 75px;
+        grid-row: span 3;
+    }
+
+    .item-nome {
+        font-size: 15px;
+    }
+
+    .item-selos {
+        margin: 6px 0;
+    }
+
+    .item-valores {
+        grid-column: 2;
+        align-items: flex-start;
+    }
+
+    .quantidade {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        margin-top: 60px;
+        padding: 30px 20px;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    header #logotipo {
+        max-width: 130px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 7px;
+        font-size: 11px;
+    }
+
+    header #icone-pessoa {
+        width: 24px;
+    }
+
+    header #carrinho {
+        width: 23px;
+    }
+
+    header nav.menu ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    header nav.menu li {
+        padding: 0 8px;
+        border-left: none;
+    }
+
+    header nav.menu a {
+        font-size: 12px;
+    }
+
+    .carrinho {
+        padding: 25px 12px 35px;
+    }
+
+    .titulo {
+        font-size: 23px;
+    }
+
+    .titulo span {
+        font-size: 14px;
+    }
+
+    .frete-gratis {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .frete-icone {
+        width: 42px;
+        height: 42px;
+    }
+
+    .frete-info p {
+        font-size: 12px;
+    }
+
+    .item {
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .item-foto {
+        width: 65px;
+        height: 65px;
+    }
+
+    .item-nome {
+        font-size: 14px;
+    }
+
+    .item-vendedor {
+        font-size: 12px;
+    }
+
+    .item-preco {
+        font-size: 18px;
+    }
+
+    .resumo {
+        padding: 22px 18px;
+    }
+
+    .resumo-total strong {
+        font-size: 27px;
+    }
+
+    .cupom input {
+        padding: 11px;
+        font-size: 13px;
+    }
+
+    .cupom button {
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+    .footer {
+        margin-top: 40px;
+        padding: 28px 16px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+    }
+
+    .footer-column h3 {
+        font-size: 14px;
+    }
+
+    .footer-column ul {
+        gap: 10px;
+    }
+
+    .footer-column ul li a {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+    .social-icons img {
+        width: 27px;
+    }
+}
+
+@media (max-width: 360px) {
+    header #logotipo {
+        max-width: 110px;
+    }
+
+    header .conta {
+        gap: 4px;
+    }
+
+    header .conta-botoes button {
+        padding: 4px 5px;
+        font-size: 10px;
+    }
+
+    .item {
+        grid-template-columns: 55px minmax(0, 1fr);
+    }
+
+    .item-foto {
+        width: 55px;
+        height: 55px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
 }

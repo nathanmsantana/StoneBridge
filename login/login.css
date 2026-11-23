@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
     overflow-x: hidden;
@@ -14,14 +18,13 @@ header nav.topo {
     align-items: center;
     gap: 10px;
     padding: 10px 20px;
-    box-sizing: border-box;
     background-color: #07326e;
 }
 
 header #logotipo {
     width: 100%;
     max-width: 250px;
-    margin-left: 18%;
+    margin-left: 10%;
 }
 
 header .pesquisa {
@@ -34,7 +37,6 @@ header .pesquisa {
 header .pesquisa input {
     width: 80%;
     height: 40px;
-    box-sizing: border-box;
     margin: 0 0 0 8%;
     padding-left: 20px;
     font-size: 15px;
@@ -43,30 +45,21 @@ header .pesquisa input {
     border-radius: 6px 0 0 6px;
 }
 
-header .btn-lupa {
-    height: 40px;
-    box-sizing: border-box;
-    background-color: #FFE600;
-    border: 1px solid #FFE600;
-    padding: 0 14px;
-    cursor: pointer;
-    border-radius: 0 6px 6px 0;
-}
-
 header .pesquisa input:focus {
     outline: none;
     border-color: #000;
 }
 
 header .btn-lupa {
+    height: 40px;
     background-color: #FFE600;
     border: none;
+    padding: 0 14px;
     cursor: pointer;
     border-radius: 0 6px 6px 0;
 }
 
 header #lupa {
-    position: static;
     width: 18px;
     height: auto;
     display: block;
@@ -109,12 +102,11 @@ header .conta-botoes a {
 header .conta-botoes button:hover {
     background-color: #FFE600;
     color: #07326e;
-    border-color: #FFE600;
 }
 
 header .carrinho-box {
     position: relative;
-    margin-right: 8%;
+    margin-right: 5%;
     padding-left: 20px;
 }
 
@@ -133,14 +125,12 @@ header #carrinho {
     width: 28px;
     height: auto;
     flex-shrink: 0;
-    margin-right: 8%;
     cursor: pointer;
 }
 
 header nav.menu {
     display: flex;
     justify-content: center;
-    gap: 30px;
     padding: 8px 20px;
     background-color: #FFD700;
 }
@@ -148,6 +138,7 @@ header nav.menu {
 header nav.menu ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -171,13 +162,13 @@ header nav.menu a {
 
 .login-card {
     background-color: #07326e;
-    width: 100%;
+    width: calc(100% - 30px);
     max-width: 420px;
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
     text-align: center;
-    margin: 50px auto 40px auto;
+    margin: 50px auto 40px;
 }
 
 .logo {
@@ -199,7 +190,7 @@ header nav.menu a {
 }
 
 .form-input {
-    width: 92.5%;
+    width: 100%;
     padding: 13px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -222,7 +213,6 @@ header nav.menu a {
     color: #FFD600;
     font-size: 13px;
     text-decoration: none;
-    display: flex;
 }
 
 .esqueci a:hover {
@@ -266,104 +256,323 @@ header nav.menu a {
 }
 
 .voltar:hover {
-    color: #082957;
+    color: #FFD700;
 }
 
 .parede {
-  width: 100%;
-  height: 25px;
-  background-color: #FFD600;
+    width: 100%;
+    height: 25px;
+    background-color: #FFD600;
 }
 
 .footer {
-  font-family: 'Arial', sans-serif;
-  width: 95%;
-  background: #07326e;
-  color: #696565;
-  padding: 40px;
-  left: 0;
-  position: absolute;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    background: #07326e;
+    color: #696565;
+    padding: 40px;
+    position: relative;
+    left: 0;
 }
 
 .footer-main {
-  display: flex;
-  gap: 120px;
-  margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 15px;
 }
 
 .footer-column h3 {
-  font-size: 16px;
-  color: #ffffff;
-  margin-bottom: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 
 .footer-column ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px; 
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .footer-column ul li a {
-  text-decoration: none;
-  color: #b3b3b3;
-  font-size: 14px;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    transition: color 0.2s ease;
 }
 
 .footer-column ul li a:hover {
-  color: #ffffff;
+    color: #ffffff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .social-icons img {
-    width: 10%;
+    width: 28px;
+    max-width: 100%;
 }
 
-.icon1:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon2:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon3:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon4:hover img{
+.icon1:hover img,
+.icon2:hover img,
+.icon3:hover img,
+.icon4:hover img {
     transition: 0.3s;
     transform: scale(1.2);
 }
 
 .footer hr {
-  border: 0;
-  border-top: 1px solid #333639;
-  margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #333639;
+    margin-bottom: 10px;
 }
 
 .footer-bottom {
-  display: flex;
-  font-size: 12px;
-  color: #8c8c8c;
+    display: flex;
+    font-size: 12px;
+    color: #8c8c8c;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .footer-links {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-links a {
-  text-decoration: none;
-  color: #8c8c8c;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #8c8c8c;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    header #logotipo {
+        max-width: 200px;
+        margin-left: 2%;
+    }
+
+    header .pesquisa input {
+        width: 85%;
+        margin-left: 2%;
+    }
+
+    header .carrinho-box {
+        margin-right: 1%;
+    }
+
+    .footer {
+        padding: 35px 25px;
+    }
+
+    .footer-main {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav.topo {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    header #logotipo {
+        max-width: 180px;
+        margin: 0;
+    }
+
+    header .pesquisa {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    header .pesquisa input {
+        width: 100%;
+        margin: 0;
+    }
+
+    header .conta {
+        margin-left: auto;
+    }
+
+    header .carrinho-box {
+        margin: 0;
+        padding-left: 12px;
+    }
+
+    header .carrinho-box::before {
+        height: 35px;
+    }
+
+    header nav.menu {
+        padding: 10px;
+    }
+
+    header nav.menu ul {
+        gap: 10px 0;
+    }
+
+    header nav.menu li {
+        padding: 0 12px;
+    }
+
+    header nav.menu a {
+        font-size: 13px;
+    }
+
+    .login-card {
+        padding: 35px 30px;
+        margin: 40px auto;
+    }
+
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav.topo {
+        gap: 12px;
+    }
+
+    header #logotipo {
+        max-width: 140px;
+    }
+
+    header #icone-pessoa {
+        width: 26px;
+    }
+
+    header .conta {
+        gap: 5px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    header #carrinho {
+        width: 24px;
+    }
+
+    header nav.menu ul {
+        gap: 12px;
+    }
+
+    header nav.menu li {
+        padding: 0 8px;
+    }
+
+    header nav.menu a {
+        font-size: 12px;
+    }
+
+    .login-card {
+        width: calc(100% - 30px);
+        padding: 30px 22px;
+        margin: 30px auto;
+    }
+
+    .logo {
+        width: 170px;
+        margin-bottom: 20px;
+    }
+
+    .form-input {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .btn-login {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .footer {
+        padding: 25px 15px;
+    }
+
+    .footer-main {
+        gap: 20px 12px;
+    }
+
+    .footer-column h3 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .footer-column ul {
+        gap: 8px;
+    }
+
+    .footer-column ul li a {
+        font-size: 12px;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .social-icons img {
+        width: 22px;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    header #logotipo {
+        max-width: 115px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 6px;
+        font-size: 10px;
+    }
+
+    header nav.menu li {
+        padding: 0 6px;
+    }
+
+    header nav.menu a {
+        font-size: 11px;
+    }
+
+    .login-card {
+        padding: 25px 18px;
+    }
+
+    .logo {
+        width: 150px;
+    }
 }

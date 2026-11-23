@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
     overflow-x: hidden;
@@ -12,16 +16,16 @@ header {
 header nav.topo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 20px;
-    box-sizing: border-box;
+    gap: 20px;
+    padding: 10px 4%;
     background-color: #07326e;
 }
 
 header #logotipo {
     width: 100%;
-    max-width: 250px;
-    margin-left: 18%;
+    max-width: 220px;
+    height: auto;
+    margin-left: 0;
 }
 
 header .pesquisa {
@@ -32,25 +36,14 @@ header .pesquisa {
 }
 
 header .pesquisa input {
-    width: 80%;
+    width: 100%;
     height: 40px;
-    box-sizing: border-box;
-    margin: 0 0 0 8%;
+    margin: 0;
     padding-left: 20px;
     font-size: 15px;
     border: 1px solid #ccc;
     border-right: none;
     border-radius: 6px 0 0 6px;
-}
-
-header .btn-lupa {
-    height: 40px;
-    box-sizing: border-box;
-    background-color: #FFE600;
-    border: 1px solid #FFE600;
-    padding: 0 14px;
-    cursor: pointer;
-    border-radius: 0 6px 6px 0;
 }
 
 header .pesquisa input:focus {
@@ -59,6 +52,8 @@ header .pesquisa input:focus {
 }
 
 header .btn-lupa {
+    height: 40px;
+    padding: 0 14px;
     background-color: #FFE600;
     border: none;
     cursor: pointer;
@@ -66,7 +61,6 @@ header .btn-lupa {
 }
 
 header #lupa {
-    position: static;
     width: 18px;
     height: auto;
     display: block;
@@ -109,13 +103,12 @@ header .conta-botoes a {
 header .conta-botoes button:hover {
     background-color: #FFE600;
     color: #07326e;
-    border-color: #FFE600;
 }
 
 header .carrinho-box {
     position: relative;
-    margin-right: 8%;
     padding-left: 20px;
+    flex-shrink: 0;
 }
 
 header .carrinho-box::before {
@@ -132,15 +125,12 @@ header .carrinho-box::before {
 header #carrinho {
     width: 28px;
     height: auto;
-    flex-shrink: 0;
-    margin-right: 8%;
     cursor: pointer;
 }
 
 header nav.menu {
     display: flex;
     justify-content: center;
-    gap: 30px;
     padding: 8px 20px;
     background-color: #FFD700;
 }
@@ -148,6 +138,7 @@ header nav.menu {
 header nav.menu ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -170,302 +161,557 @@ header nav.menu a {
 }
 
 .pagamento {
-  width: 90%;
-  margin: 50px auto 0;
-  padding-bottom: 90px;
-  color: #14213d;
+    width: 90%;
+    max-width: 1400px;
+    margin: 50px auto 0;
+    padding-bottom: 90px;
+    color: #14213d;
 }
 
 .pagamento h1 {
-  margin: 0 0 22px;
-  color: #07306b;
+    margin: 0 0 22px;
+    color: #07306b;
 }
 
 .pagamento h2 {
-  margin: 0 0 14px;
-  font-size: 1.05rem;
-  color: #07306b;
+    margin: 0 0 14px;
+    font-size: 1.05rem;
+    color: #07306b;
 }
 
 .colunas {
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: 24px;
-  align-items: start;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 24px;
+    align-items: start;
 }
 
 .bloco {
-  margin-bottom: 18px;
-  padding: 22px;
-  background: #fff;
-  border: 1px solid #e4e8f1;
-  border-radius: 16px;
+    margin-bottom: 18px;
+    padding: 22px;
+    background: #fff;
+    border: 1px solid #e4e8f1;
+    border-radius: 16px;
 }
 
 .opcao {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 10px;
-  padding: 14px 16px;
-  border: 1.5px solid #e4e8f1;
-  border-radius: 12px;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+    padding: 14px 16px;
+    border: 1.5px solid #e4e8f1;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
 .opcao:has(input:checked) {
-  border-color: #07306b;
-  background: #f3f7ff;
+    border-color: #07306b;
+    background: #f3f7ff;
 }
 
 .opcao input {
-  accent-color: #07306b;
+    accent-color: #07306b;
 }
 
 .opcao > span {
-  flex: 1;
-  font-weight: 600;
+    flex: 1;
+    font-weight: 600;
 }
 
 .opcao small {
-  display: block;
-  font-weight: 400;
-  color: #5b6b86;
+    display: block;
+    font-weight: 400;
+    color: #5b6b86;
 }
 
 .selo {
-  padding: 2px 8px;
-  border-radius: 20px;
-  background: #ffe600;
-  font-size: 0.72rem;
-  color: #07306b;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: #ffe600;
+    font-size: 0.72rem;
+    color: #07306b;
 }
 
 .painel {
-  display: none;
-  margin-bottom: 10px;
-  padding: 18px;
-  background: #f7f9fd;
-  border: 1px solid #e4e8f1;
-  border-radius: 12px;
-  color: #5b6b86;
+    display: none;
+    margin-bottom: 10px;
+    padding: 18px;
+    background: #f7f9fd;
+    border: 1px solid #e4e8f1;
+    border-radius: 12px;
+    color: #5b6b86;
 }
 
 .opcao:has(input:checked) + .painel {
-  display: block;
+    display: block;
 }
 
 .painel label {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #14213d;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #14213d;
 }
 
 .painel input,
 .painel select {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  margin-top: 6px;
-  padding: 13px;
-  background: #fff;
-  border: 1px solid #e4e8f1;
-  border-radius: 12px;
-  font: inherit;
-  font-weight: 400;
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 13px;
+    background: #fff;
+    border: 1px solid #e4e8f1;
+    border-radius: 12px;
+    font: inherit;
+    font-weight: 400;
 }
 
 .linha {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
 }
 
 .produto {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #e4e8f1;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e4e8f1;
 }
 
 .resumo {
-  position: sticky;
-  top: 20px;
-  padding: 26px;
-  background: linear-gradient(160deg, #0b4aa0, #07306b 60%);
-  border-radius: 24px;
-  color: #fff;
+    position: sticky;
+    top: 20px;
+    padding: 26px;
+    background: linear-gradient(160deg, #0b4aa0, #07306b 60%);
+    border-radius: 24px;
+    color: #fff;
 }
 
 .resumo h2 {
-  color: #fff;
+    color: #fff;
 }
 
 .resumo p {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0;
+    padding: 6px 0;
 }
 
 .resumo .destaque {
-  color: #ffe600;
+    color: #ffe600;
 }
 
 .resumo .total {
-  margin-top: 12px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 1.2rem;
-  font-weight: 700;
+    margin-top: 12px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .cupom {
-  display: flex;
-  gap: 8px;
-  margin: 18px 0;
+    display: flex;
+    gap: 8px;
+    margin: 18px 0;
 }
 
 .cupom input,
 .cupom button {
-  box-sizing: border-box;
-  padding: 12px 14px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 0;
-  border-radius: 12px;
-  color: #fff;
-  font: inherit;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 0;
+    border-radius: 12px;
+    color: #fff;
+    font: inherit;
 }
 
 .cupom input {
-  flex: 1;
-  min-width: 0;
+    flex: 1;
+    min-width: 0;
 }
 
 .cupom button {
-  font-weight: 700;
-  cursor: pointer;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .botao-finalizar {
-  width: 100%;
-  padding: 16px;
-  background: #ffe600;
-  border: 0;
-  border-radius: 14px;
-  color: #07306b;
-  font: inherit;
-  font-size: 1rem;
-  font-weight: 800;
-  cursor: pointer;
+    width: 100%;
+    padding: 16px;
+    background: #ffe600;
+    border: 0;
+    border-radius: 14px;
+    color: #07306b;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
 }
 
 .resumo a {
-  display: block;
-  margin-top: 14px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #fff;
-  text-decoration: none;
+    display: block;
+    margin-top: 14px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    text-decoration: none;
 }
 
 .parede {
-  width: 100%;
-  height: 25px;
-  background-color: #FFD600;
+    width: 100%;
+    height: 25px;
+    background-color: #FFD600;
 }
 
 .footer {
-  font-family: 'Arial', sans-serif;
-  width: 95%;
-  background: #07326e;
-  color: #696565;
-  padding: 40px;
-  left: 0;
-  position: absolute;
+    width: 100%;
+    padding: 40px 5%;
+    background: #07326e;
+    color: #696565;
+    position: relative;
 }
 
 .footer-main {
-  display: flex;
-  gap: 120px;
-  margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 15px;
 }
 
 .footer-column h3 {
-  font-size: 16px;
-  color: #ffffff;
-  margin-bottom: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 
 .footer-column ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .footer-column ul li a {
-  text-decoration: none;
-  color: #b3b3b3;
-  font-size: 14px;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    transition: color 0.2s ease;
 }
 
 .footer-column ul li a:hover {
-  color: #ffffff;
+    color: #ffffff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .social-icons img {
-    width: 10%;
+    width: 30px;
+    max-width: 100%;
 }
 
-.icon1:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon2:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon3:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon4:hover img{
+.icon1:hover img,
+.icon2:hover img,
+.icon3:hover img,
+.icon4:hover img {
     transition: 0.3s;
     transform: scale(1.2);
 }
 
 .footer hr {
-  border: 0;
-  border-top: 1px solid #333639;
-  margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #333639;
+    margin-bottom: 10px;
 }
 
 .footer-bottom {
-  display: flex;
-  font-size: 12px;
-  color: #8c8c8c;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 12px;
+    color: #8c8c8c;
     justify-content: space-between;
 }
 
 .footer-links {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-links a {
-  text-decoration: none;
-  color: #8c8c8c;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #8c8c8c;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    header nav.topo {
+        gap: 15px;
+        padding: 10px 3%;
+    }
+
+    header #logotipo {
+        max-width: 170px;
+    }
+
+    header .conta {
+        gap: 6px;
+    }
+
+    header .conta-botoes button {
+        padding: 6px 10px;
+    }
+
+    .colunas {
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 18px;
+    }
+
+    .footer-main {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav.topo {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    header #logotipo {
+        max-width: 150px;
+    }
+
+    header .pesquisa {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    header .conta {
+        margin-left: auto;
+    }
+
+    header .carrinho-box {
+        padding-left: 12px;
+    }
+
+    header nav.menu {
+        padding: 10px;
+    }
+
+    header nav.menu ul {
+        gap: 12px 0;
+    }
+
+    header nav.menu li {
+        padding: 0 12px;
+    }
+
+    header nav.menu a {
+        font-size: 13px;
+    }
+
+    .pagamento {
+        width: 92%;
+        margin-top: 30px;
+    }
+
+    .colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .resumo {
+        position: static;
+    }
+
+    .footer {
+        padding: 30px 5%;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav.topo {
+        gap: 12px;
+        padding: 12px 4%;
+    }
+
+    header #logotipo {
+        max-width: 125px;
+    }
+
+    header #icone-pessoa {
+        width: 25px;
+    }
+
+    header .conta {
+        gap: 5px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 8px;
+        font-size: 11px;
+    }
+
+    header #carrinho {
+        width: 24px;
+    }
+
+    header .carrinho-box {
+        padding-left: 10px;
+    }
+
+    header .carrinho-box::before {
+        height: 35px;
+    }
+
+    header .pesquisa input {
+        height: 38px;
+        font-size: 13px;
+    }
+
+    header .btn-lupa {
+        height: 38px;
+        padding: 0 12px;
+    }
+
+    header nav.menu ul {
+        gap: 10px 0;
+    }
+
+    header nav.menu li {
+        padding: 0 8px;
+    }
+
+    header nav.menu a {
+        font-size: 12px;
+    }
+
+    .pagamento {
+        width: 92%;
+        margin-top: 25px;
+        padding-bottom: 50px;
+    }
+
+    .pagamento h1 {
+        font-size: 1.6rem;
+    }
+
+    .bloco {
+        padding: 16px;
+    }
+
+    .opcao {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .opcao > span {
+        font-size: 14px;
+    }
+
+    .selo {
+        font-size: 0.65rem;
+    }
+
+    .painel {
+        padding: 14px;
+    }
+
+    .linha {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .resumo {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .cupom {
+        flex-wrap: wrap;
+    }
+
+    .cupom input {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+    }
+
+    .footer-column h3 {
+        font-size: 14px;
+    }
+
+    .footer-column ul li a {
+        font-size: 12px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+
+    .social-icons img {
+        width: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    header #logotipo {
+        max-width: 105px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 6px;
+        font-size: 10px;
+    }
+
+    header nav.menu li {
+        padding: 0 6px;
+    }
+
+    header nav.menu a {
+        font-size: 11px;
+    }
+
+    .pagamento h1 {
+        font-size: 1.4rem;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100%;
     overflow-x: hidden;
@@ -14,7 +18,6 @@ header nav.topo {
     align-items: center;
     gap: 10px;
     padding: 10px 20px;
-    box-sizing: border-box;
     background-color: #07326e;
 }
 
@@ -33,8 +36,8 @@ header .pesquisa {
 
 header .pesquisa input {
     width: 80%;
+    min-width: 0;
     height: 40px;
-    box-sizing: border-box;
     margin: 0 0 0 8%;
     padding-left: 20px;
     font-size: 15px;
@@ -43,24 +46,16 @@ header .pesquisa input {
     border-radius: 6px 0 0 6px;
 }
 
-header .btn-lupa {
-    height: 40px;
-    box-sizing: border-box;
-    background-color: #FFE600;
-    border: 1px solid #FFE600;
-    padding: 0 14px;
-    cursor: pointer;
-    border-radius: 0 6px 6px 0;
-}
-
 header .pesquisa input:focus {
     outline: none;
     border-color: #000;
 }
 
 header .btn-lupa {
+    height: 40px;
     background-color: #FFE600;
     border: none;
+    padding: 0 14px;
     cursor: pointer;
     border-radius: 0 6px 6px 0;
 }
@@ -109,7 +104,6 @@ header .conta-botoes a {
 header .conta-botoes button:hover {
     background-color: #FFE600;
     color: #07326e;
-    border-color: #FFE600;
 }
 
 header .carrinho-box {
@@ -133,7 +127,6 @@ header #carrinho {
     width: 28px;
     height: auto;
     flex-shrink: 0;
-    margin-right: 8%;
     cursor: pointer;
 }
 
@@ -148,6 +141,7 @@ header nav.menu {
 header nav.menu ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -169,7 +163,7 @@ header nav.menu a {
     font-size: 14px;
 }
 
-.dicas{
+.dicas {
     font-family: 'Arial', sans-serif;
     width: 60%;
     max-width: 800px;
@@ -183,100 +177,299 @@ header nav.menu a {
 }
 
 .parede {
-  width: 100%;
-  height: 25px;
-  background-color: #FFD600;
+    width: 100%;
+    height: 25px;
+    background-color: #FFD600;
 }
 
 .footer {
-  font-family: 'Arial', sans-serif;
-  width: 95%;
-  background: #07326e;
-  color: #696565;
-  padding: 40px;
-  left: 0;
-  position: absolute;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    background: #07326e;
+    color: #696565;
+    padding: 40px;
+    position: relative;
 }
 
 .footer-main {
-  display: flex;
-  gap: 120px;
-  margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 15px;
 }
 
 .footer-column h3 {
-  font-size: 16px;
-  color: #ffffff;
-  margin-bottom: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 
 .footer-column ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px; 
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .footer-column ul li a {
-  text-decoration: none;
-  color: #b3b3b3;
-  font-size: 14px;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    transition: color 0.2s ease;
 }
 
 .footer-column ul li a:hover {
-  color: #ffffff;
+    color: #ffffff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .social-icons img {
-    width: 10%;
+    width: 32px;
+    max-width: 100%;
 }
 
-.icon1:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon2:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon3:hover img{
-    transition: 0.3s;
-    transform: scale(1.2);
-}
-
-.icon4:hover img{
+.icon1:hover img,
+.icon2:hover img,
+.icon3:hover img,
+.icon4:hover img {
     transition: 0.3s;
     transform: scale(1.2);
 }
 
 .footer hr {
-  border: 0;
-  border-top: 1px solid #333639;
-  margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #333639;
+    margin-bottom: 10px;
 }
 
 .footer-bottom {
-  display: flex;
-  font-size: 12px;
-  color: #8c8c8c;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 12px;
+    color: #8c8c8c;
     justify-content: space-between;
 }
 
 .footer-links {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-links a {
-  text-decoration: none;
-  color: #8c8c8c;
-  transition: color 0.2s ease;
+    text-decoration: none;
+    color: #8c8c8c;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: #ffffff;
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    header #logotipo {
+        max-width: 190px;
+        margin-left: 0;
+    }
+
+    header .pesquisa input {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    header .carrinho-box {
+        margin-right: 0;
+    }
+
+    .dicas {
+        width: 75%;
+    }
+
+    .footer {
+        padding: 35px 25px;
+    }
+
+    .footer-main {
+        gap: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav.topo {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    header #logotipo {
+        max-width: 160px;
+    }
+
+    header .pesquisa {
+        order: 3;
+        flex: 1 1 100%;
+    }
+
+    header .conta {
+        gap: 6px;
+    }
+
+    header #icone-pessoa {
+        width: 27px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 9px;
+        font-size: 12px;
+    }
+
+    header .carrinho-box {
+        padding-left: 12px;
+    }
+
+    header .carrinho-box::before {
+        height: 35px;
+    }
+
+    header #carrinho {
+        width: 25px;
+    }
+
+    header nav.menu {
+        padding: 10px;
+    }
+
+    header nav.menu ul {
+        gap: 10px 0;
+    }
+
+    header nav.menu li {
+        padding: 0 12px;
+    }
+
+    header nav.menu a {
+        font-size: 13px;
+    }
+
+    .dicas {
+        width: 85%;
+        padding: 25px;
+        margin: 40px auto;
+    }
+
+    .footer {
+        padding: 30px 20px;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    header #logotipo {
+        max-width: 130px;
+    }
+
+    header .conta-botoes button {
+        padding: 5px 7px;
+        font-size: 11px;
+    }
+
+    header #icone-pessoa {
+        width: 24px;
+    }
+
+    header #carrinho {
+        width: 23px;
+    }
+
+    header nav.menu ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    header nav.menu li {
+        padding: 0 8px;
+        border-left: none;
+    }
+
+    header nav.menu a {
+        font-size: 12px;
+    }
+
+    .dicas {
+        width: 92%;
+        padding: 20px;
+        margin: 30px auto;
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 28px 16px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 15px;
+    }
+
+    .footer-column h3 {
+        font-size: 14px;
+    }
+
+    .footer-column ul {
+        gap: 10px;
+    }
+
+    .footer-column ul li a {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+    .social-icons img {
+        width: 27px;
+    }
+}
+
+@media (max-width: 360px) {
+    header #logotipo {
+        max-width: 110px;
+    }
+
+    header .conta {
+        gap: 4px;
+    }
+
+    header .conta-botoes button {
+        padding: 4px 5px;
+        font-size: 10px;
+    }
+
+    .dicas {
+        width: 94%;
+        padding: 16px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
 }
