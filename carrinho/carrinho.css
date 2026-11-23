@@ -612,6 +612,10 @@ header nav.menu a {
   cursor: pointer;
 }
 
+.botao-finalizar {
+  text-decoration: none;
+}
+
 .botao-finalizar:hover {
   background: #f2d900;
 }
@@ -669,6 +673,7 @@ header nav.menu a {
 .parede {
   width: 100%;
   height: 25px;
+  margin-bottom: -8%;
   background-color: #FFD600;
 }
 
