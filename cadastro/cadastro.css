@@ -181,7 +181,7 @@ header nav.menu a {
 .cadastro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
+  width: 90%;
   overflow: hidden;
   border-radius: 28px;
   background: #fff;
@@ -193,7 +193,7 @@ header nav.menu a {
   font-size: 28px;
   font-weight: 800;
   color: #FFD600;
-  font-size: 80px;
+  font-size: 60px;
 }
 
 .lateral {
