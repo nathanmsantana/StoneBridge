@@ -184,6 +184,7 @@ header nav.menu a {
     object-fit: cover;
 }
 
+<<<<<<< HEAD
 .carrossel-seta {
     position: absolute;
     top: 50%;
@@ -206,6 +207,8 @@ header nav.menu a {
     right: 14px;
 }
 
+=======
+>>>>>>> 6c7a0014eb177216350d8af02bae0f3ed06edd5e
 .categorias {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -308,10 +311,17 @@ header nav.menu a {
 }
 
 .parede {
+<<<<<<< HEAD
     width: 100%;
     height: 25px;
     background-color: #FFD600;
     margin-bottom: -6px;
+=======
+  width: 100%;
+  height: 25px;
+  background-color: #FFD600;
+  margin-bottom: -8%;
+>>>>>>> 6c7a0014eb177216350d8af02bae0f3ed06edd5e
 }
 
 .footer {

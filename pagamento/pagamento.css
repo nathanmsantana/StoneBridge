@@ -205,6 +205,21 @@ header nav.menu a {
     cursor: pointer;
 }
 
+.pix {
+  width: 5%;
+  margin: -2.5% 10%;
+}
+
+.cartaocredito {
+  width: 5%;
+  margin: -2.5% 10%;
+}
+
+.cartaodebito {
+  width: 5%;
+  margin: -2.5% -9%;
+}
+
 .opcao:has(input:checked) {
     border-color: #07306b;
     background: #f3f7ff;

@@ -81,7 +81,7 @@ header #icone-pessoa {
 header .conta-botoes {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 1%;
 }
 
 header .conta-botoes button {
