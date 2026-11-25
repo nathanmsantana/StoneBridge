@@ -171,12 +171,16 @@ header nav.menu a {
     font-family: "Inter", Arial, sans-serif;
 }
 
-.termo {
-    font-family: "Inter", Arial, sans-serif;
+.titulo {
+    font-family: 'Arial', sans-serif;
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    color: #FFE600;
+    width: 80%;
+    background: #FFE600;
+    padding: 30px;
+    margin: 60px auto -4.5%;
+    border-radius: 10px 10px 0 0;
 }
 
 .parede {

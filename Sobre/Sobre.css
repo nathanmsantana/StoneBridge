@@ -163,7 +163,7 @@ header nav.menu a {
     font-family: "Inter", Arial, sans-serif;
     width: 60%;
     max-width: 800px;
-    background: #1f3657;
+    background: #07326e;
     color: #bfc8d4;
     padding: 30px;
     margin: 60px auto;
@@ -268,4 +268,15 @@ header nav.menu a {
 
 .footer-links a:hover {
     color: #ffffff;
+}
+.titulo {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    width: 50%;
+    background: #FFE600;
+    padding: 30px;
+    margin: 60px auto -4.5%;
+    border-radius: 10px 10px 0 0;
 }
