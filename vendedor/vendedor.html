@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do vendedor | StoneBridge</title>
+    <link rel="stylesheet" href="vendedor.css">
+    <link rel="icon" href="../inicio/logotipo.png">
+</head>
+<body>
+
+        <header>
+        <nav class="topo">
+                <a href="../inicio/inicio.html"><img src="../inicio/logotipo.png" id="logotipo"></a>
+
+                <div class="pesquisa">
+                    <input type="text" placeholder="Pesquisar equipamentos, ferramentas e muito mais...">
+                    <button class="btn-lupa"><img src="../inicio/lupa.png" id="lupa"></button>
+                </div>
+
+                <div class="conta">
+                    <img src="../inicio/pessoa.png" id="icone-pessoa">
+
+                <div class="conta-botoes">
+                     <button class="login"><a href="../login/login.html">Entrar</a></button>
+                    <button class="cadastro" ><a href="../cadastro/cadastro.html">Cadastrar</a></button>
+                </div>
+            </div>
+
+            <div class="carrinho-box">
+                <a href="../carrinho/carrinho.html"> <img src="../inicio/carrinho.png" id="carrinho"></a>
+                </div>
+        </nav>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="../inicio/inicio.html">Início</a></li>
+                <li><a href="../produtos/produtos.html">Produtos</a></li>
+                <li><a href="../Contato/contato.html">Contato</a></li>
+                <li><a href="../sobre/sobre.html">Sobre nós</a></li>
+                <li><a href="../suporte/suporte.html">Suporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="area">
+
+  <nav class="area-menu">
+    <a class="area-menu__item" href="pagina-vendedor.html" aria-current="page">Informações da empresa</a>
+    <a class="area-menu__item" href="vendedor-produtos.html">Produtos</a>
+    <a class="area-menu__item" href="vendedor-pedidos.html">Pedidos recebidos</a>
+    <a class="area-menu__item" href="vendedor-financeiro.html">Financeiro</a>
+    <a class="area-menu__item area-menu__item--sair" href="login.html">Sair</a>
+  </nav>
+
+  <section class="area-painel">
+    <h2 class="area-painel__titulo">Informações da empresa</h2>
+
+    <form id="form-empresa">
+
+      <h3 class="area-painel__subtitulo">Dados do vendedor</h3>
+
+      <label class="area-campo">Nome da loja <input class="area-campo__input" name="loja" required></label>
+      <label class="area-campo">CNPJ ou CPF <input class="area-campo__input" name="documento" inputmode="numeric" maxlength="18" required></label>
+      <label class="area-campo">E-mail comercial <input class="area-campo__input" name="email" type="email" required></label>
+      <label class="area-campo">Telefone <input class="area-campo__input" name="tel" type="tel" placeholder="(11) 99999-9999"></label>
+
+      <h3 class="area-painel__subtitulo">Endereço</h3>
+
+      <label class="area-campo">CEP <input class="area-campo__input" name="cep" inputmode="numeric" maxlength="9" placeholder="00000-000"></label>
+
+      <div class="area-linha">
+        <label class="area-campo">Rua <input class="area-campo__input" name="rua"></label>
+        <label class="area-campo">Número <input class="area-campo__input" name="numero"></label>
+      </div>
+
+      <div class="area-linha">
+        <label class="area-campo">Complemento <input class="area-campo__input" name="complemento"></label>
+        <label class="area-campo">Bairro <input class="area-campo__input" name="bairro"></label>
+      </div>
+
+      <div class="area-linha">
+        <label class="area-campo">Cidade <input class="area-campo__input" name="cidade"></label>
+        <label class="area-campo">Estado <input class="area-campo__input" name="estado" maxlength="2" placeholder="SP"></label>
+      </div>
+
+      <button class="area-botao" type="submit">Salvar alterações</button>
+      <p class="area-aviso" hidden>Alterações salvas</p>
+
+    </form>
+  </section>
+
+</main>
+
+<div class="parede"></div>
+    <div class="footer">
+
+ <div class="footer-main">
+
+    <div class="footer-column">
+
+      <h3>Produtos que temos</h3>
+      <ul>
+        <li><a href="../produtos/produtos.html">Equipamentos de Construção</a></li>
+        <li><a href="../produtos/produtos.html">Equipamentos de Elétrica</a></li>
+        <li><a href="../produtos/produtos.html">Equipamentos de Hidráulica</a></li>
+        <li><a href="../produtos/produtos.html">Alugar Equipamentos</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Mais informações</h3>
+      <ul>
+        <li><a href="../contato/Contato.html">Contato</a></li>
+        <li><a href="../sobre/sobre.html">Sobre nós</a></li>
+        <li><a href="../suporte/suporte.html">Suporte</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>Redes Sociais</h3>
+      <div class="social-icons">
+        <a href="#" class="icon1"><img src="../inicio/logofacebook.jpeg"></a>
+        <a href="#" class="icon2"><img src="../inicio/logox.jpeg"></a>
+        <a href="#" class="icon3"><img src="../inicio/logoyoutube.jpeg"></a>
+        <a href="#" class="icon4"><img src="../inicio/logoinstagram.jpeg"></a>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="footer-bottom" id="contato">
+    <div class="footer-info">
+      <p>© 2026 StoneBridge. Todos os direitos reservados.</p>
+      <p>Whatsapp: (11) 99999-9999</p>
+      <p>Telefone: (11) 5555-5555</p>
+      <p>CNPJ: 14.380.200/0001-21</p>
+    </div>
+    <div class="footer-links">
+      <a href="../termosdeuso/termosdeuso.html">Termos e condições de uso</a>
+      <a href="../privacidade/privacidade.html">Privacidade</a>
+      <a href="../dicasdeseguranca/dicasdeseguranca.html">Dicas de segurança</a>
+    </div>
+</div>
+
+</body>
+</html>

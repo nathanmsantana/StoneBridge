@@ -1,0 +1,394 @@
+body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+}
+
+header nav.topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #07326e;
+}
+
+header #logotipo {
+    width: 100%;
+    max-width: 250px;
+    margin-left: 18%;
+}
+
+header .pesquisa {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+header .pesquisa input {
+    width: 80%;
+    height: 40px;
+    margin: 0 0 0 8%;
+    padding-left: 20px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+}
+
+header .pesquisa input:focus {
+    outline: none;
+    border-color: #000;
+}
+
+header .btn-lupa {
+    height: 40px;
+    padding: 0 14px;
+    background-color: #FFE600;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 6px 6px 0;
+}
+
+header #lupa {
+    position: static;
+    width: 18px;
+    height: auto;
+    display: block;
+}
+
+header .conta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+header #icone-pessoa {
+    width: 32px;
+    height: auto;
+    display: block;
+}
+
+header .conta-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+header .conta-botoes button {
+    background-color: #07326e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    display: block;
+}
+
+header .conta-botoes a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header .conta-botoes button:hover {
+    background-color: #FFE600;
+    color: #07326e;
+}
+
+header .carrinho-box {
+    position: relative;
+    margin-right: 8%;
+    padding-left: 20px;
+}
+
+header .carrinho-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 50px;
+    background-color: #fff;
+}
+
+header #carrinho {
+    width: 28px;
+    height: auto;
+    flex-shrink: 0;
+    margin-right: 8%;
+    cursor: pointer;
+}
+
+header nav.menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 8px 20px;
+    background-color: #FFD700;
+}
+
+header nav.menu ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav.menu li {
+    padding: 0 20px;
+    border-left: 2px solid #07326e;
+}
+
+header nav.menu li:first-child {
+    border-left: none;
+}
+
+header nav.menu a {
+    color: #07326e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.contausuario {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  gap: 3%;
+  align-items: start;
+  width: 90%;
+  margin: 2rem auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #10213f;
+}
+
+
+.menuusuario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #07306b;
+  border-radius: 1.2rem;
+}
+
+.menu__item {
+  padding: 1rem 1.2rem;
+  border: 0;
+  border-radius: 0.8rem;
+  background: none;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu__item:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.menu__item[aria-current="page"] {
+  background: #fff;
+  color: #07306b;
+}
+
+.menu__item--vender {
+  background: #ffd900;
+  color: #07306b;
+}
+
+.menu__item--vender:hover {
+  background: #ffe433;
+}
+
+.menu__item--sair {
+  font-weight: 400;
+}
+
+
+.painel {
+  padding: 2rem 4%;
+  border: 1px solid #dfe4f0;
+  border-radius: 1.2rem;
+}
+
+.painel__titulo {
+  color: #07306b;
+}
+
+.painel__subtitulo {
+  margin: 2rem 0 1rem;
+  color: #07306b;
+  font-size: 1rem;
+}
+
+
+.linha {
+  display: flex;
+  gap: 3%;
+}
+
+.campo {
+  display: block;
+  flex: 1;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.campo__input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #dfe4f0;
+  border-radius: 0.8rem;
+  background: #f8f9ff;
+  font: inherit;
+}
+
+
+.botaoalteracoes {
+  margin-top: 1rem;
+  padding: 0.9rem 2rem;
+  border: 0;
+  border-radius: 0.8rem;
+  background: #07306b;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.botaoalteracoes:hover {
+  background: #0a4aa0;
+}
+
+.aviso {
+  margin-top: 1rem;
+  color: #0b7a3b;
+  font-weight: 700;
+}
+
+.vazio {
+  padding: 3rem 0;
+  text-align: center;
+  color: #5b6784;
+}
+
+
+.conta :focus-visible {
+  outline: 3px solid #ffd900;
+  outline-offset: 2px;
+}
+
+.parede {
+    width: 100%;
+    height: 25px;
+    background-color: #FFD600;
+}
+
+.footer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 2.5rem 5%;
+  background: #07326e;
+  color: #696565;
+  font-family: Arial, sans-serif;
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 8%;
+  margin-bottom: 1rem;
+}
+
+.footer-column h3 {
+  margin: 0 0 1.25rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-column ul li a {
+  color: #b3b3b3;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-icons img {
+  display: block;
+  width: 2.5rem;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.footer hr {
+  margin: 0 0 0.625rem;
+  border: 0;
+  border-top: 1px solid #333639;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.25rem;
+  color: #8c8c8c;
+  font-size: 0.75rem;
+}
+
+.footer-info p {
+  margin: 0 0 0.3rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.footer-links a {
+  color: #8c8c8c;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
